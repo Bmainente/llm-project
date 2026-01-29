@@ -4,7 +4,10 @@ import os
 
 load_dotenv() 
 
-llm = OpenAI(API_KEY_OPENAI)
+# api_key = os.environ['API_KEY_OPENAI']
+api_key = os.getenv("API_KEY_OPENAI")
+
+llm = OpenAI(api_key=api_key)
 
 pergunta = "me conte sobre a queda do bitcoin no dia de hoje"
 
